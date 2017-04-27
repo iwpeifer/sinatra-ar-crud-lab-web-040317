@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<form action='/posts/<%= @post.id %>' method='POST'>
+		<input type='hidden' id='hidden' name='_method' value='patch'>
+		<p>Name:<input value='<%= @post.name %>' type='text' name='post[name]'></p>
+		<p>Content:<input value='<%= @post.content %>' type='text' name='post[content]'></p>
+		<input type='submit' name='submit' value='EDIT! :-O'>
+	</form>
+
+	<a href='/posts/<%= @post.id %>'>Back</a>
+</body>
+
+</html>

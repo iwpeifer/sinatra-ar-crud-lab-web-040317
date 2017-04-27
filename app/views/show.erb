@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+
+		<h3><%= @post.name %></h3>
+		<%= @post.content %>
+
+		<a href='/'>Back</a>
+
+		<a href='/posts/<%= @post.id %>/edit'>EDIT</a>
+
+		<form method='POST' action='/posts/<%= @post.id %>/delete'>
+			<input type='hidden' id='hidden' name='_method' value='delete'>
+			<input type='submit' value='DELETE'>
+		</form>
+	
+	</body>
+
+</html>
